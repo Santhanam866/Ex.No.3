@@ -1,114 +1,85 @@
-# Ex. No. 3 — Scenario-Based Report Development Utilizing Diverse Prompting Techniques
+# Ex.No.3-Scenario-Based Report Development Utilizing Diverse Prompting Techniques for the the following Prompt Engineering types with examples - Straightforward Prompts - Tabular Format Prompting - Missing Word Prompting - Preceding Question Prompting.
 
-**Date:** 28.08.2026
+### DATE: 21-09-2026
+### REGISTER NUMBER: 212224040293
 
+### Aim: 
+To write the prompts for these following prompt types and evaluate that using any one method 1. Straightforward Prompts, 2. Tabular Format Prompting 3.Preceding Question Prompting and 4. Missing Word 
 
-**Register Number:** 212224040293
+### Explanation
+Selected use case (Unit 5): Automated educational content generation — producing concise explanations and quick-study materials for students.
 
-## Aim
+### Implementation
+Procedure: For each prompt type below I provide (a) the prompt used, (b) an expanded reply from ChatGPT, and (c) an expanded reply from Gemini. After the responses I provide a short qualitative evaluation using a simple rubric (relevance, completeness, clarity).
 
-To write prompts for the following prompt engineering types and evaluate them:
+**1. Straightforward Prompting**
+- Prompt: "Define photosynthesis in one sentence."
+- **ChatGPT:**
 
-1. Straightforward Prompts
-2. Tabular Format Prompting
-3. Preceding Question Prompting
-4. Missing Word Prompting
+Photosynthesis is the biochemical process used by green plants, algae, and certain bacteria to convert light energy into chemical energy. In the light-dependent stage, chlorophyll captures photons and uses that energy to split water molecules, releasing oxygen and creating ATP and NADPH; in the Calvin cycle (light-independent reactions), those energy carriers drive the fixation of atmospheric carbon dioxide into glucose and other carbohydrates. Overall, photosynthesis sustains food chains and regulates atmospheric oxygen and carbon dioxide levels — a simplified net equation is 6 CO2 + 6 H2O + light → C6H12O6 + 6 O2.
 
-## Problem Statement / Explanation
+ - **Gemini:**
 
-Prompt engineering is the practice of designing inputs to a generative AI/LLM system so that it produces the most accurate, relevant, and useful output. Different prompting styles suit different goals — a direct instruction works well for simple factual recall, a tabular prompt is ideal when structured comparison is needed, a preceding-question prompt frames context before asking for an explanation, and a missing-word (cloze-style) prompt tests or elicits precise, targeted recall. This report takes one use case — **explaining core science and technology concepts to a learner** — and demonstrates it across all four prompt types, evaluating the output quality of each.
+Photosynthesis is the natural process by which photosynthetic organisms transform sunlight into stored chemical energy. Light energy absorbed by pigments (like chlorophyll) drives electron transport and the production of energy-rich molecules, which are then used to assemble simple sugars from carbon dioxide; oxygen is produced as a byproduct. This process not only provides the primary energy source for most ecosystems but also maintains the balance of gases in Earth’s atmosphere.
 
-## Algorithm / Procedure
+**2. Tabular Format Prompting**
+- Prompt: "Compare and contrast AC and DC current in a table."
+- **ChatGPT:**
 
-**Step 1: Straightforward Prompts** Give the model a direct, unambiguous instruction with no additional framing, and evaluate the directness and conciseness of the response.
-
-**Step 2: Tabular Format Prompting** Instruct the model to structure its output as a table with defined columns, and evaluate clarity and ease of comparison.
-
-**Step 3: Preceding Question Prompting** Pose a question first, followed by a request for explanation, to give the model explicit context before the detailed answer, and evaluate depth and relevance.
-
-**Step 4: Missing Word Prompting** Give the model a sentence with a blank ("___") and ask it to complete it, and evaluate factual accuracy and precision.
-
-**Step 5: Evaluation** Compare outputs from all four types against the criteria: *clarity, structure, accuracy, and usefulness*, and record observations.
-
----
-
-## 1. Straightforward Prompts
-
-**Prompt A:** "Define blockchain in one sentence."
-**Generated Output:** Blockchain is a distributed digital ledger that records transactions across many computers so that entries cannot be altered retroactively without changing all later records.
-
-**Prompt B:** "List three advantages of solar energy."
-**Generated Output:**
-1. Renewable and abundant, since sunlight is naturally replenished.
-2. Produces no direct emissions during electricity generation.
-3. Reduces long-term electricity bills once panels are installed.
-
-**Evaluation:** Straightforward prompts produce quick, concise, directly usable answers. Best suited for simple fact retrieval or short lists, but they offer little structure for comparing multiple attributes at once.
-
----
-
-## 2. Tabular Format Prompting
-
-**Prompt A:** "Compare and contrast HTTP and HTTPS in a table."
-
-**Generated Output:**
-
-| Feature | HTTP | HTTPS |
+| Aspect | AC (Alternating Current) | DC (Direct Current) |
 |---|---|---|
-| Full form | HyperText Transfer Protocol | HTTP Secure |
-| Security | Data sent in plain text | Data encrypted using SSL/TLS |
-| Port used | 80 | 443 |
-| Speed | Slightly faster | Marginally slower due to encryption |
-| Use case | Non-sensitive browsing | Login pages, payments, sensitive data |
+| Direction | Periodically reverses direction (sinusoidal or other waveforms) | Flows steadily in one direction |
+| Typical Sources | Power plants, the electrical grid, household outlets | Batteries, photovoltaic cells, some power supplies |
+| Transmission | Easily transformed to higher/lower voltages using transformers — efficient for long-distance transmission | Less efficient for long-distance transmission without conversion; used for point-to-point power or storage |
+| Typical Uses | Household and industrial power, large motors, grid distribution | Electronics, portable devices, battery storage, DC motors in certain applications |
 
-**Prompt B:** "Provide a table listing four types of computer memory, their speed, and one use case each."
+Explanation (ChatGPT): AC is the backbone of grid power because it can be stepped up to high voltages for transmission (reducing losses) and stepped down for safe local use; DC is essential for devices that rely on stable polarity and for energy storage systems. Modern systems often combine both using power electronics.
 
-**Generated Output:**
+ - **Gemini:**
 
-| Memory Type | Speed | Use Case |
+| Aspect | AC | DC |
 |---|---|---|
-| Cache | Fastest | Storing frequently used CPU data |
-| RAM | Very fast | Running active programs |
-| SSD | Fast | Primary storage in modern laptops |
-| HDD | Slow | Bulk, low-cost long-term storage |
+| Flow | Alternates direction at a set frequency (e.g., 50/60 Hz) | Constant, unidirectional flow |
+| Sources | Generators, mains supply | Batteries, solar panels, rectified supplies |
+| Transmission Strengths | Efficient transmission with transformers and lower line losses at high voltage | Preferred for low-voltage electronics and storage; conversion needed for long-distance lines |
+| Uses | Building power distribution, large-scale motors | Electronics, battery-operated devices, charging systems |
 
-**Evaluation:** Tabular prompting excels when the goal is side-by-side comparison of multiple items across shared attributes. It significantly improves readability over prose for multi-point comparisons but is unnecessary for single-fact answers.
+Explanation (Gemini): AC's ability to change voltage efficiently makes it ideal for distribution networks. DC remains critical where stable polarity is required or where energy is stored (batteries); recent developments in power electronics and HVDC transmission blur the historical distinctions by enabling efficient long-distance DC lines.
 
----
+**3. Preceding Question Prompting**
+- Prompt: "Why is climate change a global concern? Explain how greenhouse gases contribute to global warming."
+- **ChatGPT:**
 
-## 3. Preceding Question Prompting
+Climate change is a global concern because changes in the Earth’s average climate affect natural systems and human societies across the planet. Warming temperatures alter weather patterns, intensify extreme events (heatwaves, heavy precipitation, stronger storms), shift agricultural zones, reduce freshwater availability in some regions, and contribute to sea-level rise through melting ice and thermal expansion. Vulnerable communities and ecosystems are disproportionately affected.
 
-**Prompt A:** "Why is data privacy a growing concern? Explain how anonymization protects user data."
-**Generated Output:** Data privacy is a growing concern because companies collect vast amounts of personal information, and breaches or misuse can lead to identity theft, financial loss, or surveillance. Anonymization protects user data by removing or altering identifying details — such as names or ID numbers — so that individuals cannot be traced back from the dataset, allowing organizations to analyze data patterns while reducing the risk of exposing personal identities.
+Greenhouse gases — primarily carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), and fluorinated gases — trap outgoing infrared radiation emitted by Earth’s surface. Solar energy reaches the surface as shortwave radiation and is re-emitted as longwave infrared; greenhouse gases absorb part of that infrared radiation and re-radiate it in all directions, including back toward the surface, increasing the net energy retained in the climate system (a process known as the greenhouse effect). Human activities (fossil fuel combustion, deforestation, livestock, industrial processes) have increased atmospheric concentrations of these gases, tipping the balance and driving global warming. Mitigation involves reducing emissions, enhancing sinks (e.g., reforestation), and transitioning to low-carbon energy sources.
 
-**Prompt B:** "How do satellites stay in orbit? Describe the balance of forces involved."
-**Generated Output:** Satellites stay in orbit because of a balance between two forces: gravity, which continuously pulls the satellite toward Earth, and its forward velocity, which pushes it in a straight line. Because the satellite is moving fast enough sideways, it keeps "falling" toward Earth at the same rate the Earth's surface curves away beneath it, resulting in a stable circular or elliptical path around the planet.
+ - **Gemini:**
 
-**Evaluation:** Framing a question before requesting an explanation guides the model toward a more contextual, motivated response — it explains *why* something matters before *how* it works, producing richer, more pedagogically structured answers than a bare instruction.
+Climate change matters globally because it alters the physical conditions on which societies and ecosystems rely: temperature regimes, precipitation patterns, and the frequency of extreme events—all of which influence food production, water security, public health, and infrastructure. Rising temperatures accelerate glacier and ice-sheet melt, raise sea levels, and shift habitats.
 
----
+Greenhouse gases function like a thermal blanket around the planet. They allow sunlight in but absorb and re-emit the infrared energy Earth sends back out, retaining heat in the atmosphere. When concentrations of CO2, methane, and other greenhouse gases increase due to human activities, the blanket thickens and less heat escapes, so global average temperatures rise. Addressing the issue requires both cutting emissions and adapting to unavoidable impacts.
 
-## 4. Missing Word Prompting
+**4. Missing Word Prompting**
+- Prompt: "In photosynthesis, plants absorb sunlight to produce ____ ."
+- **ChatGPT:**
 
-**Prompt A:** "The powerhouse of the cell is the ___."
-**Generated Output:** The powerhouse of the cell is the **mitochondria**.
+The missing word is:
 
-**Prompt B:** "In networking, an IP address that stays the same is called a ___ IP."
-**Generated Output:** In networking, an IP address that stays the same is called a **static** IP.
+👉 glucose
 
-**Evaluation:** Missing-word (cloze) prompting is highly effective for testing or eliciting precise factual recall with minimal output — ideal for quizzes, flashcards, or verifying a model's grasp of a specific fact. It is not suited to open-ended or explanatory tasks.
+Full sentence:
 
----
+“In photosynthesis, plants absorb sunlight to produce glucose.”
 
-## Comparative Summary
+ - **Gemini:**
 
-| Prompt Type | Best For | Output Style | Limitation |
-|---|---|---|---|
-| Straightforward Prompts | Quick facts, short lists | Concise, direct | Limited structure for comparisons |
-| Tabular Format Prompting | Multi-attribute comparisons | Structured, scannable | Overkill for single facts |
-| Preceding Question Prompting | Contextual explanations | Detailed, motivated | Longer, less concise |
-| Missing Word Prompting | Precise factual recall | Minimal, targeted | Not suited for explanations |
+In photosynthesis, plants absorb sunlight to produce glucose (sugar) and oxygen.
 
-## Conclusion
+### Conclusion
+Both models produced accurate and useful responses tailored to the prompts and the educational use case. ChatGPT provided more detailed, stepwise explanations and contextual background — useful when learners need deeper understanding or instructors require fuller exposition. Gemini delivered clear, concise summaries that are well suited to quick-study materials or flashcard-style notes. In practice, choose ChatGPT-style replies for depth and worked explanations, and Gemini-style replies for brevity and fast review; both are appropriate for automated educational content depending on the learner's needs.
 
-Each prompting technique serves a distinct purpose and produces a different kind of output. Straightforward prompts work best for quick facts, tabular prompting suits multi-point comparisons, preceding-question prompting produces deeper contextual explanations, and missing-word prompting is ideal for testing precise recall. Choosing the right prompt type depends on the task's goal — brevity, comparison, depth, or precision.
+Result: The prompts were executed and both models produced high-quality responses appropriate for educational content generation.
+
+# Result: 
+Thus the Prompts were executed successfully.
